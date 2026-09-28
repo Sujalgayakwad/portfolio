@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Sujal Gayakwad | Cybersecurity Project Hub & Full-Stack Engineer</title>
-  <meta name="description" content="Personal cybersecurity project hub and portfolio of Sujal Gayakwad. Showcasing technical evidence, wireless security audits, CTFs, and secure full-stack software.">
-  <meta name="keywords" content="Sujal Gayakwad, Cybersecurity Portfolio, Wi-Fi Security, Threat Hunter, Network Auditor, TryHackMe, Python, CTF, Full-Stack">
+  <meta name="description"
+    content="Personal cybersecurity project hub and portfolio of Sujal Gayakwad. Showcasing technical evidence, wireless security audits, CTFs, and secure full-stack software.">
+  <meta name="keywords"
+    content="Sujal Gayakwad, Cybersecurity Portfolio, Wi-Fi Security, Threat Hunter, Network Auditor, TryHackMe, Python, CTF, Full-Stack">
   <meta name="author" content="Sujal Gayakwad">
+
+  <!-- Mobile & PWA App Meta -->
+  <meta name="theme-color" content="#07090e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#07090e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Sujal Gayakwad">
+  <meta name="application-name" content="Sujal CyberHub">
+  <meta name="format-detection" content="telephone=no">
 
   <!-- Open Graph Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sujal Gayakwad | Cybersecurity Project Hub">
-  <meta property="og:description" content="Explore real-world cybersecurity projects, wireless threat analysis tools, CTF write-ups, and hands-on laboratory evidence.">
+  <meta property="og:description"
+    content="Explore real-world cybersecurity projects, wireless threat analysis tools, CTF write-ups, and hands-on laboratory evidence.">
   <meta property="og:image" content="./assets/images/wifi-security.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
   <!-- Scroll Progress Indicator -->
@@ -43,30 +59,41 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#home" class="logo" aria-label="Sujal Gayakwad - Cybersecurity Hub">
-        <div class="logo-symbol"></div>
+        <div class="logo-symbol">🛡️</div>
         <span>Cyber<span class="logo-dot">.Sujal</span></span>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="btn btn-primary btn-sm mobile-nav-cta">Get In Touch</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
-
-        <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
+        <!-- Audio Feedback Toggle -->
+        <button class="sound-toggle-btn" id="sound-toggle" aria-label="Toggle Cyber Audio Feedback"
+          title="Toggle Cyber Audio Feedback">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
           </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm desktop-nav-cta">Get In Touch</a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"
+          aria-controls="nav-menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
         </button>
       </div>
     </div>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- ================= 1. HERO SECTION ================= -->
   <section id="home" class="hero">
@@ -92,13 +119,16 @@
           </div>
 
           <p class="hero-desc">
-            A <strong>personal cybersecurity project hub</strong> demonstrating hands-on technical evidence. Specializing in wireless threat posture auditing, automated reconnaissance tooling, defensive network security, and secure software engineering.
+            A <strong>personal cybersecurity project hub</strong> demonstrating hands-on technical evidence.
+            Specializing in wireless threat posture auditing, automated reconnaissance tooling, defensive network
+            security, and secure software engineering.
           </p>
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary">
               <span>Explore Projects & Evidence</span>
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -106,7 +136,8 @@
 
             <a href="#contact" class="btn btn-secondary">
               <span>Get In Touch</span>
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
@@ -115,18 +146,30 @@
 
           <!-- Social / Profile Buttons -->
           <div class="hero-socials">
-            <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="social-pill github" title="GitHub Repositories">
-              <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+              class="social-pill github" title="GitHub Repositories">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+              </svg>
               <span>GitHub</span>
             </a>
 
-            <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer" class="social-pill linkedin" title="LinkedIn Profile">
-              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z"/></svg>
+            <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer"
+              class="social-pill linkedin" title="LinkedIn Profile">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z" />
+              </svg>
               <span>LinkedIn</span>
             </a>
 
-            <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer" class="social-pill instagram" title="Instagram Profile">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer"
+              class="social-pill instagram" title="Instagram Profile">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
               <span>Instagram</span>
             </a>
           </div>
@@ -178,41 +221,53 @@
           <span>Personal Introduction</span>
         </div>
         <h2 class="section-title">Beyond the CV: <span class="gradient-text">Who I Am & What Drives Me</span></h2>
-        <p class="section-subtitle">A concise look into my cybersecurity interests, active technical exploration, and current research focus.</p>
+        <p class="section-subtitle">A concise look into my cybersecurity interests, active technical exploration, and
+          current research focus.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-text-col">
           <p>
-            I am a security-focused technologist with a deep curiosity for understanding how protocols break and how defensive architectures withstand modern adversaries. Rather than viewing security as an afterthought, I approach engineering with a <strong>security-first, zero-trust mindset</strong>.
+            I am a security-focused technologist with a deep curiosity for understanding how protocols break and how
+            defensive architectures withstand modern adversaries. Rather than viewing security as an afterthought, I
+            approach engineering with a <strong>security-first, zero-trust mindset</strong>.
           </p>
           <p>
-            My core technical fascination lies in <strong>wireless radio frequency auditing, rogue access point heuristics, and password entropy thermodynamics</strong>. I enjoy dissecting 802.11 spectrum traffic, understanding the cryptographic nuances of WPA2 vs WPA3-SAE, and developing native operating system tools that turn passive network reconnaissance into actionable threat scoring.
+            My core technical fascination lies in <strong>wireless radio frequency auditing, rogue access point
+              heuristics, and password entropy thermodynamics</strong>. I enjoy dissecting 802.11 spectrum traffic,
+            understanding the cryptographic nuances of WPA2 vs WPA3-SAE, and developing native operating system tools
+            that turn passive network reconnaissance into actionable threat scoring.
           </p>
           <p>
-            <strong>What I am currently building & learning:</strong> Deepening my hands-on practice in memory forensics, threat hunting with Zeek & Suricata, and building automated security verification pipelines that combine LLM vector indexing with structured vulnerability feeds.
+            <strong>What I am currently building & learning:</strong> Deepening my hands-on practice in memory
+            forensics, threat hunting with Zeek & Suricata, and building automated security verification pipelines that
+            combine LLM vector indexing with structured vulnerability feeds.
           </p>
 
           <div class="about-pillars">
             <div class="pillar-card">
               <div class="pillar-icon">🛰️</div>
               <div class="pillar-title">RF & Wireless Auditing</div>
-              <div class="pillar-desc">Passive 802.11 netsh hooks, spectrum overlap detection, and rogue AP heuristics.</div>
+              <div class="pillar-desc">Passive 802.11 netsh hooks, spectrum overlap detection, and rogue AP heuristics.
+              </div>
             </div>
             <div class="pillar-card">
               <div class="pillar-icon">🔐</div>
               <div class="pillar-title">Applied Cryptography</div>
-              <div class="pillar-desc">Shannon entropy evaluation, pre-shared key resistance, and cipher downgrade defense.</div>
+              <div class="pillar-desc">Shannon entropy evaluation, pre-shared key resistance, and cipher downgrade
+                defense.</div>
             </div>
             <div class="pillar-card">
               <div class="pillar-icon">🧱</div>
               <div class="pillar-title">Secure Full-Stack Dev</div>
-              <div class="pillar-desc">Defending against OWASP Top 10 vulnerabilities, strict RBAC, and input sanitization.</div>
+              <div class="pillar-desc">Defending against OWASP Top 10 vulnerabilities, strict RBAC, and input
+                sanitization.</div>
             </div>
             <div class="pillar-card">
               <div class="pillar-icon">🧪</div>
               <div class="pillar-title">Adversary Emulation</div>
-              <div class="pillar-desc">Hands-on CTF exploration, lateral movement analysis, and defensive blue-team hardening.</div>
+              <div class="pillar-desc">Hands-on CTF exploration, lateral movement analysis, and defensive blue-team
+                hardening.</div>
             </div>
           </div>
         </div>
@@ -237,48 +292,70 @@
             </div>
           </div>
 
-          <h3 style="font-size: 1.05rem; margin-bottom: 14px; font-family: var(--font-heading);">Verified Communication & Profiles</h3>
+          <h3 style="font-size: 1.05rem; margin-bottom: 14px; font-family: var(--font-heading);">Verified Communication
+            & Profiles</h3>
           <div class="social-cards-wrapper">
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer" class="social-connect-card linkedin">
+            <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer"
+              class="social-connect-card linkedin">
               <div class="social-connect-left">
                 <div class="social-avatar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z" />
+                  </svg>
                 </div>
                 <div>
                   <div class="social-info-name">LinkedIn</div>
                   <div class="social-info-handle">Professional Identity & Endorsements</div>
                 </div>
               </div>
-              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
 
             <!-- GitHub -->
-            <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="social-connect-card github">
+            <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+              class="social-connect-card github">
               <div class="social-connect-left">
                 <div class="social-avatar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                  </svg>
                 </div>
                 <div>
                   <div class="social-info-name">GitHub</div>
                   <div class="social-info-handle">Source Code Repositories & Commits</div>
                 </div>
               </div>
-              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
 
             <!-- Instagram -->
-            <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer" class="social-connect-card instagram">
+            <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer"
+              class="social-connect-card instagram">
               <div class="social-connect-left">
                 <div class="social-avatar-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                  </svg>
                 </div>
                 <div>
                   <div class="social-info-name">Instagram</div>
                   <div class="social-info-handle">Personal Updates & Community</div>
                 </div>
               </div>
-              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg class="social-arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
             </a>
           </div>
         </div>
@@ -294,7 +371,8 @@
           <span>Core Evidence Portfolio</span>
         </div>
         <h2 class="section-title">Technical Projects & <span class="gradient-text">Engineering Evidence</span></h2>
-        <p class="section-subtitle">Click any project card to inspect full technical objectives, implementation actions, skills acquired, and real-world relevance.</p>
+        <p class="section-subtitle">Click any project card to inspect full technical objectives, implementation actions,
+          skills acquired, and real-world relevance.</p>
       </div>
 
       <!-- Category Filter Tabs -->
@@ -316,7 +394,8 @@
           <div class="project-body">
             <h3 class="project-title">CyberShield - Wi-Fi Security Analyser & Spectrum Auditor</h3>
             <p class="project-desc">
-              High-performance Windows wireless security engine performing passive 802.11 spectrum analysis, automated threat index grading, Evil-Twin rogue AP detection, and WPA pre-shared key entropy cracking tests.
+              High-performance Windows wireless security engine performing passive 802.11 spectrum analysis, automated
+              threat index grading, Evil-Twin rogue AP detection, and WPA pre-shared key entropy cracking tests.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">Python 3.11</span>
@@ -328,10 +407,17 @@
             <div class="project-actions">
               <button class="btn btn-primary btn-sm" data-project-id="wifi-security">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujalgayakwad/Wi-Fi-Security-Analyser" target="_blank"
+                rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -348,7 +434,9 @@
           <div class="project-body">
             <h3 class="project-title">Study Buddy AI - Academic Copilot & Knowledge Synthesis</h3>
             <p class="project-desc">
-              Deterministic RAG platform ingesting technical RFCs, security standards, and courseware into vector search to generate hallucination-resistant Socratic tutoring dialogues, spaced-repetition flashcards, and concept graphs.
+              Deterministic RAG platform ingesting technical RFCs, security standards, and courseware into vector search
+              to generate hallucination-resistant Socratic tutoring dialogues, spaced-repetition flashcards, and concept
+              graphs.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">FastAPI</span>
@@ -360,10 +448,17 @@
             <div class="project-actions">
               <button class="btn btn-primary btn-sm" data-project-id="study-buddy">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -380,7 +475,8 @@
           <div class="project-body">
             <h3 class="project-title">CineStream - Next-Gen Cinema Streaming Hub</h3>
             <p class="project-desc">
-              Fluid, client-side streaming entertainment interface with 60FPS video trailer carousels, genre-specific discovery, debounced REST API queries, progressive blur-up image caching, and accessible media controls.
+              Fluid, client-side streaming entertainment interface with 60FPS video trailer carousels, genre-specific
+              discovery, debounced REST API queries, progressive blur-up image caching, and accessible media controls.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">JavaScript (ES6+)</span>
@@ -392,10 +488,17 @@
             <div class="project-actions">
               <button class="btn btn-primary btn-sm" data-project-id="movie-streaming">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -410,9 +513,10 @@
             <div class="project-overlay"></div>
           </div>
           <div class="project-body">
-            <h3 class="project-title">HostelEase - University Dormitory & Resident Security Portal</h3>
+            <h3 class="project-title">HostelEase - Hostel-management-system</h3>
             <p class="project-desc">
-              Campus housing administration system featuring strict Role-Based Access Control (RBAC), biometric resident attendance logging, interactive visual floor-map room allocation, and automated invoice audit trails.
+              Campus housing administration system featuring strict Role-Based Access Control (RBAC), biometric resident
+              attendance logging, interactive visual floor-map room allocation, and automated invoice audit trails.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">Node.js / Express</span>
@@ -422,12 +526,19 @@
               <span class="tech-tag">Chart.js Analytics</span>
             </div>
             <div class="project-actions">
-              <button class="btn btn-primary btn-sm" data-project-id="hostel-management">
+              <button class="btn btn-primary btn-sm" data-project-id="Hostel-management-system">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujalgayakwad/Hostel-management-system" target="_blank"
+                rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -444,7 +555,8 @@
           <div class="project-body">
             <h3 class="project-title">Coming Soon</h3>
             <p class="project-desc">
-              Autonomous Threat Hunting & SIEM Telemetry Pipeline — An upcoming defensive framework correlating endpoint event streams, analyzing threat indicators, and automating incident containment.
+              Autonomous Threat Hunting & SIEM Telemetry Pipeline — An upcoming defensive framework correlating endpoint
+              event streams, analyzing threat indicators, and automating incident containment.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">Python 3.12</span>
@@ -456,10 +568,17 @@
             <div class="project-actions">
               <button class="btn btn-primary btn-sm" data-project-id="coming-soon-1">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -476,7 +595,8 @@
           <div class="project-body">
             <h3 class="project-title">Coming Soon</h3>
             <p class="project-desc">
-              Zero-Trust Cloud Mesh & Policy Auditor — An upcoming cloud security posture auditor providing continuous Kubernetes container validation, microservice authorization, and least-privilege verification.
+              Zero-Trust Cloud Mesh & Policy Auditor — An upcoming cloud security posture auditor providing continuous
+              Kubernetes container validation, microservice authorization, and least-privilege verification.
             </p>
             <div class="project-tech-stack">
               <span class="tech-tag cyan">Go / Python</span>
@@ -488,10 +608,17 @@
             <div class="project-actions">
               <button class="btn btn-primary btn-sm" data-project-id="coming-soon-2">
                 <span>View Full Details & Evidence</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </button>
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View GitHub Code">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm" title="View GitHub Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>Code</span>
               </a>
             </div>
@@ -504,8 +631,12 @@
   <!-- ================= DETAILED PROJECT EVIDENCE MODAL ================= -->
   <div id="project-modal" class="modal-backdrop" aria-hidden="true">
     <div class="modal-container">
+      <div class="sheet-drag-handle" aria-hidden="true"></div>
       <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal window">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
       <img id="modal-img" src="" alt="Project Evidence Preview" class="modal-header-img">
       <div class="modal-content-inner">
@@ -560,21 +691,28 @@
             <span>06. Outcome & Real-World Industry Relevance</span>
           </div>
           <p id="modal-outcome" class="modal-section-text" style="margin-bottom: 8px;"></p>
-          <p id="modal-relevance" class="modal-section-text" style="color: var(--accent-emerald); font-weight: 500;"></p>
+          <p id="modal-relevance" class="modal-section-text" style="color: var(--accent-emerald); font-weight: 500;">
+          </p>
         </div>
 
         <!-- 7. Verifiable Evidence & Action Bar -->
         <div class="modal-action-bar">
-          <a id="modal-repo-btn" href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+          <a id="modal-repo-btn" href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+            </svg>
             <span>GitHub Repository</span>
           </a>
 
-          <a href="#projects" class="btn btn-secondary btn-sm" onclick="alert('Technical Documentation & Architecture write-up is available in the repository README.md');">
+          <a href="#projects" class="btn btn-secondary btn-sm"
+            onclick="alert('Technical Documentation & Architecture write-up is available in the repository README.md');">
             <span>📄 Technical Documentation</span>
           </a>
 
-          <a href="#projects" class="btn btn-secondary btn-sm" onclick="alert('Live interactive demo running locally in portfolio workspace.');">
+          <a href="#projects" class="btn btn-secondary btn-sm"
+            onclick="alert('Live interactive demo running locally in portfolio workspace.');">
             <span>⚡ Interactive Demo</span>
           </a>
         </div>
@@ -591,7 +729,8 @@
           <span>Encrypted Comms Channel</span>
         </div>
         <h2 class="section-title">Initiate <span class="gradient-text">Direct Contact</span></h2>
-        <p class="section-subtitle">Recruiting for security roles, technical collaboration, or vulnerability research discussions? Send a direct transmission.</p>
+        <p class="section-subtitle">Recruiting for security roles, technical collaboration, or vulnerability research
+          discussions? Send a direct transmission.</p>
       </div>
 
       <div class="contact-grid">
@@ -599,7 +738,10 @@
         <div class="contact-info-cards">
           <div class="contact-method-card">
             <div class="contact-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </div>
             <div class="contact-method-meta">
               <div class="contact-method-label">Direct Email</div>
@@ -610,7 +752,10 @@
 
           <div class="contact-method-card">
             <div class="contact-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
             </div>
             <div class="contact-method-meta">
               <div class="contact-method-label">Base Location</div>
@@ -620,7 +765,10 @@
 
           <div class="contact-method-card">
             <div class="contact-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
             </div>
             <div class="contact-method-meta">
               <div class="contact-method-label">Availability Status</div>
@@ -629,20 +777,33 @@
           </div>
 
           <div style="margin-top: 10px;">
-            <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 12px; color: var(--text-dim);">DIRECT VERIFIED SOCIAL LINKS:</div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 12px; color: var(--text-dim);">
+              DIRECT VERIFIED SOCIAL LINKS:</div>
             <div class="hero-socials">
-              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer" class="social-pill github">
-                <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+              <a href="https://github.com/Sujagayakwad" target="_blank" rel="noopener noreferrer"
+                class="social-pill github">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z" />
+                </svg>
                 <span>GitHub</span>
               </a>
 
-              <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer" class="social-pill linkedin">
-                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z"/></svg>
+              <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" rel="noopener noreferrer"
+                class="social-pill linkedin">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.87 0-1.58.7-1.58 1.57s.71 1.57 1.58 1.57 1.58-.7 1.58-1.57-.71-1.57-1.58-1.57Z" />
+                </svg>
                 <span>LinkedIn</span>
               </a>
 
-              <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer" class="social-pill instagram">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" rel="noopener noreferrer"
+                class="social-pill instagram">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                </svg>
                 <span>Instagram</span>
               </a>
             </div>
@@ -660,14 +821,16 @@
 
               <div class="form-group">
                 <label for="email" class="form-label">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="elena@security.org" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="elena@security.org"
+                  required>
               </div>
             </div>
 
             <div class="form-group-row">
               <div class="form-group">
                 <label for="subject" class="form-label">Transmission Subject</label>
-                <input type="text" id="subject" name="subject" class="form-control" placeholder="Role Inquiry / Security Audit">
+                <input type="text" id="subject" name="subject" class="form-control"
+                  placeholder="Role Inquiry / Security Audit">
               </div>
 
               <div class="form-group">
@@ -683,12 +846,14 @@
 
             <div class="form-group">
               <label for="message" class="form-label">Transmission Body *</label>
-              <textarea id="message" name="message" class="form-control" placeholder="Please outline role details, scope, or questions..." required></textarea>
+              <textarea id="message" name="message" class="form-control"
+                placeholder="Please outline role details, scope, or questions..." required></textarea>
             </div>
 
             <button type="submit" id="form-submit-btn" class="btn btn-primary" style="width: 100%;">
               <span>Send Transmission</span>
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
               </svg>
@@ -720,20 +885,74 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 Sujal Gayakwad. Engineered for GitHub Pages deployment (100% Client-Side Pure HTML/CSS/JS).</p>
-        <p>Profiles: <a href="https://github.com/Sujagayakwad" target="_blank" style="color:var(--accent-cyan);">GitHub</a> • <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank" style="color:var(--accent-cyan);">LinkedIn</a> • <a href="https://www.instagram.com/sujal._gayakwad/" target="_blank" style="color:var(--accent-cyan);">Instagram</a></p>
+        <p>Profiles: <a href="https://github.com/Sujagayakwad" target="_blank"
+            style="color:var(--accent-cyan);">GitHub</a> • <a
+            href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/" target="_blank"
+            style="color:var(--accent-cyan);">LinkedIn</a> • <a href="https://www.instagram.com/sujal._gayakwad/"
+            target="_blank" style="color:var(--accent-cyan);">Instagram</a></p>
       </div>
     </div>
   </footer>
 
   <!-- Floating Back to Top Button -->
   <button class="back-to-top" aria-label="Back to Top" title="Back to Top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
       <line x1="12" y1="19" x2="12" y2="5"></line>
       <polyline points="5 12 12 5 19 12"></polyline>
     </svg>
   </button>
 
+  <!-- ================= Mobile App Bottom Navigation Dock ================= -->
+  <nav class="mobile-app-dock" id="mobile-app-dock" aria-label="Mobile Navigation">
+    <a href="#home" class="dock-item active" data-dock="home" aria-label="Home Section">
+      <div class="dock-icon-wrapper">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </div>
+      <span class="dock-label">Home</span>
+    </a>
+
+    <a href="#about" class="dock-item" data-dock="about" aria-label="About Section">
+      <div class="dock-icon-wrapper">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </div>
+      <span class="dock-label">About</span>
+    </a>
+
+    <a href="#projects" class="dock-item" data-dock="projects" aria-label="Projects Section">
+      <div class="dock-icon-wrapper">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <span class="dock-badge">6</span>
+      </div>
+      <span class="dock-label">Projects</span>
+    </a>
+
+    <a href="#contact" class="dock-item" data-dock="contact" aria-label="Contact Section">
+      <div class="dock-icon-wrapper">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+      <span class="dock-label">Contact</span>
+    </a>
+  </nav>
+
   <!-- Script (script.js for GitHub Pages) -->
   <script src="./script.js"></script>
 </body>
+
 </html>
