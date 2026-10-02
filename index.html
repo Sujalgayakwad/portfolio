@@ -72,15 +72,7 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Audio Feedback Toggle -->
-        <button class="sound-toggle-btn" id="sound-toggle" aria-label="Toggle Cyber Audio Feedback"
-          title="Toggle Cyber Audio Feedback">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          </svg>
-        </button>
+
 
         <a href="#contact" class="btn btn-primary btn-sm desktop-nav-cta">Get In Touch</a>
 
@@ -175,40 +167,7 @@
           </div>
         </div>
 
-        <!-- Hero Avatar Visual with 3D Tilt & Cyber Chips -->
-        <div class="hero-visual">
-          <div class="avatar-wrapper" data-tilt>
-            <div class="avatar-glow"></div>
-            <div class="avatar-card">
-              <img src="./assets/images/avatar.jpg" alt="Sujal Gayakwad - Cybersecurity Specialist" class="avatar-img">
-            </div>
 
-            <!-- Floating Cyber Chips -->
-            <div class="floating-chip floating-chip-1">
-              <span class="chip-icon cyan">📡</span>
-              <div>
-                <div style="font-size:0.72rem; color:var(--text-dim);">Wireless Security</div>
-                <div>802.11 & Evil Twin</div>
-              </div>
-            </div>
-
-            <div class="floating-chip floating-chip-2">
-              <span class="chip-icon emerald">🛡️</span>
-              <div>
-                <div style="font-size:0.72rem; color:var(--text-dim);">Threat Defense</div>
-                <div>NIST & CIS Standards</div>
-              </div>
-            </div>
-
-            <div class="floating-chip floating-chip-3">
-              <span class="chip-icon purple">💻</span>
-              <div>
-                <div style="font-size:0.72rem; color:var(--text-dim);">Secure Engineering</div>
-                <div>Python • Flask • SQL</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -826,23 +785,7 @@
               </div>
             </div>
 
-            <div class="form-group-row">
-              <div class="form-group">
-                <label for="subject" class="form-label">Transmission Subject</label>
-                <input type="text" id="subject" name="subject" class="form-control"
-                  placeholder="Role Inquiry / Security Audit">
-              </div>
 
-              <div class="form-group">
-                <label for="project-type" class="form-label">Classification Category</label>
-                <select id="project-type" name="projectType" class="form-control">
-                  <option value="recruiting">Full-Time / Contract Recruitment</option>
-                  <option value="wireless">Wireless Security Audit</option>
-                  <option value="web-sec">Full-Stack Web Engineering</option>
-                  <option value="ctf">CTF / Technical Collaboration</option>
-                </select>
-              </div>
-            </div>
 
             <div class="form-group">
               <label for="message" class="form-label">Transmission Body *</label>
@@ -952,6 +895,12 @@
   </nav>
 
   <!-- Script (script.js for GitHub Pages) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("WiGI_bbtOxUMTM0_I");
+    })();
+  </script>
   <script src="./script.js"></script>
 </body>
 

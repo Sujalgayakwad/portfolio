@@ -40,11 +40,11 @@ function initParticleCanvas() {
   resizeCanvas();
 
   const isMobile = window.innerWidth <= 768;
-  const nodeDensity = isMobile ? 22000 : 14000;
-  const maxNodes = isMobile ? 36 : 85;
+  const nodeDensity = isMobile ? 22000 : 12000;
+  const maxNodes = isMobile ? 36 : 100;
   const nodes = [];
   const nodeCount = Math.min(Math.floor((width * height) / nodeDensity), maxNodes);
-  const maxDistance = isMobile ? 110 : 145;
+  const maxDistance = isMobile ? 110 : 180;
   const mouse = { x: null, y: null, radius: isMobile ? 120 : 170 };
 
   // Pointer & Glow Handler
@@ -97,7 +97,7 @@ function initParticleCanvas() {
       radius: 5,
       maxRadius: isMobile ? 120 : 180,
       alpha: 0.85,
-      color: Math.random() > 0.5 ? '0, 242, 254' : '168, 85, 247'
+      color: Math.random() > 0.5 ? '251, 146, 60' : '232, 121, 249'
     });
   }
 
@@ -126,7 +126,7 @@ function initParticleCanvas() {
       vy: -(Math.random() * 0.4 + 0.15),
       size: Math.random() * 1.5 + 0.5,
       alpha: Math.random() * 0.5 + 0.15,
-      color: Math.random() > 0.6 ? '#00f2fe' : (Math.random() > 0.5 ? '#10b981' : '#a855f7')
+      color: Math.random() > 0.6 ? '#fb923c' : (Math.random() > 0.5 ? '#f43f5e' : '#e879f9')
     });
   }
 
@@ -134,21 +134,21 @@ function initParticleCanvas() {
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.55;
-      this.vy = (Math.random() - 0.5) * 0.55;
+      this.vx = (Math.random() - 0.5) * 1.25;
+      this.vy = (Math.random() - 0.5) * 1.25;
       const typeRoll = Math.random();
       if (typeRoll > 0.85) {
-        this.type = 'gateway'; // Emerald security hub
+        this.type = 'gateway'; // Rose security hub
         this.radius = Math.random() * 1.5 + 3;
-        this.colorRgb = '16, 185, 129';
+        this.colorRgb = '244, 63, 94';
       } else if (typeRoll > 0.65) {
         this.type = 'crypto'; // Purple sentry
         this.radius = Math.random() * 1.2 + 2.4;
-        this.colorRgb = '168, 85, 247';
+        this.colorRgb = '232, 121, 249';
       } else {
-        this.type = 'node'; // Cyan cyber terminal
+        this.type = 'node'; // Orange cyber terminal
         this.radius = Math.random() * 1.2 + 1.6;
-        this.colorRgb = '0, 242, 254';
+        this.colorRgb = '251, 146, 60';
       }
       this.pulse = Math.random() * Math.PI * 2;
       this.pulseSpeed = 0.03 + Math.random() * 0.02;
@@ -250,11 +250,11 @@ function initParticleCanvas() {
 
           // Subtle neon dual-color line
           if (nodes[i].type === 'crypto' || nodes[j].type === 'crypto') {
-            ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
+            ctx.strokeStyle = `rgba(232, 121, 249, ${alpha})`;
           } else if (nodes[i].type === 'gateway' || nodes[j].type === 'gateway') {
-            ctx.strokeStyle = `rgba(16, 185, 129, ${alpha})`;
+            ctx.strokeStyle = `rgba(244, 63, 94, ${alpha})`;
           } else {
-            ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+            ctx.strokeStyle = `rgba(251, 146, 60, ${alpha})`;
           }
           ctx.lineWidth = 0.85;
           ctx.stroke();
@@ -272,7 +272,7 @@ function initParticleCanvas() {
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+          ctx.strokeStyle = `rgba(251, 146, 60, ${alpha})`;
           ctx.lineWidth = 1.2;
           ctx.stroke();
         }
@@ -290,7 +290,7 @@ function initParticleCanvas() {
           targetIdx,
           progress: 0,
           speed: Math.random() * 0.016 + 0.012,
-          color: source.type === 'crypto' ? '#d8b4fe' : (source.type === 'gateway' ? '#6ee7b7' : '#e0f2fe')
+          color: source.type === 'crypto' ? '#f0abfc' : (source.type === 'gateway' ? '#fb7185' : '#fdba74')
         });
       }
     }
@@ -820,7 +820,6 @@ function initContactForm() {
 
     const name = form.name.value.trim();
     const email = form.email.value.trim();
-    const subject = form.subject.value.trim();
     const message = form.message.value.trim();
 
     if (!name || !email || !message) {
@@ -843,21 +842,37 @@ function initContactForm() {
       Encrypting & Sending...
     `;
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `
-        <span>Send Transmission</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      `;
+    // Send email using EmailJS
+    Promise.all([
+      emailjs.sendForm('service_c3l5ysb', 'template_eel5hh9', form),
+      emailjs.sendForm('service_c3l5ysb', 'template_vw070k2', form)
+    ])
+      .then(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `
+          <span>Send Transmission</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        `;
 
-      form.reset();
-      triggerToast(`Transmission received from ${name}! Sujal will respond soon.`);
-      displayStatus('Message successfully delivered. Thank you!', 'success');
-      playSynthesizedChime();
-    }, 1100);
+        form.reset();
+        triggerToast(`Transmission received from ${name}! Sujal will respond soon.`);
+        displayStatus('Message successfully delivered. Thank you!', 'success');
+        playSynthesizedChime();
+      }, (error) => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `
+          <span>Send Transmission</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        `;
+        displayStatus('Failed to send transmission. Check your configuration.', 'error');
+        console.error('EmailJS Error:', error);
+      });
   });
 
   function displayStatus(msg, type) {
@@ -895,7 +910,7 @@ function triggerToast(text) {
 }
 
 /* ================= 9. AUDIO FEEDBACK ================= */
-let soundOn = true;
+let soundOn = false;
 let audioContext = null;
 
 function initSoundToggle() {
