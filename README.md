@@ -1,309 +1,361 @@
-# 🛡️ Sujal Gayakwad — Cybersecurity & Full-Stack Developer
+<div align="center">
 
-<p align="center">
-  <img src="./assets/images/avatar.jpg" alt="Sujal Gayakwad" width="150">
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:ff3b5c,50:ff6b35,100:7c3aed&height=220&section=header&text=SUJAL%20GAYAKWAD&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Cybersecurity%20%7C%20Full-Stack%20Development%20%7C%20Security%20Research&descAlignY=58&descSize=18&animation=fadeIn"/>
 
-<h3 align="center">
-  Cybersecurity • Full-Stack Development • Secure Engineering
-</h3>
+<br>
 
-<p align="center">
-  <a href="https://sujalgayakwad.github.io/portfolio/">
-    🌐 Live Portfolio
-  </a>
-  &nbsp; • &nbsp;
-  <a href="https://github.com/Sujagayakwad">
-    💻 GitHub
-  </a>
-  &nbsp; • &nbsp;
-  <a href="https://www.linkedin.com/in/sujal-gayakwad-4758a3319/">
-    💼 LinkedIn
-  </a>
-</p>
+<a href="https://sujalgayakwad.github.io/portfolio/">
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=FF5A5F&center=true&vCenter=true&width=800&lines=Cybersecurity+Enthusiast+%F0%9F%9B%A1%EF%B8%8F;Full-Stack+Developer+%F0%9F%92%BB;Security+Researcher+%F0%9F%94%90;Building+Systems+%7C+Breaking+Systems+%7C+Securing+Systems;Always+Learning.+Always+Building."/>
+</a>
 
----
+<br><br>
 
-## 👋 About Me
+<a href="https://sujalgayakwad.github.io/portfolio/">
+<img src="https://img.shields.io/badge/%F0%9F%8C%90%20LIVE%20PORTFOLIO-FF4D5A?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
+<a href="https://github.com/Sujalgayakwad">
+<img src="https://img.shields.io/badge/GITHUB-111111?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+<a href="mailto:sujalgayakwad119@gmail.com">
+<img src="https://img.shields.io/badge/EMAIL-FF6B35?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 
-Hi, I'm **Sujal Gayakwad**, a cybersecurity-focused developer with an interest in **secure software engineering, web development, networking, wireless security, and emerging technologies**.
+<br><br>
 
-I enjoy building practical applications, exploring cybersecurity concepts, and developing modern web solutions with a security-first mindset.
+<img src="https://komarev.com/ghpvc/?username=Sujalgayakwad&style=for-the-badge&color=ff4d5a&label=PROFILE+VISITORS"/>
 
-> 🔐 **Build. Secure. Learn. Innovate.**
+</div>
 
 ---
 
-## 🌐 My Portfolio
+# 🛡️ Cyber.Sujal
 
-My personal portfolio is a cybersecurity and development project hub showcasing my technical skills, projects, learning journey, and professional profile.
+> **Security • Engineering • Research • Innovation**
 
-### 🔗 Live Website
+I'm **Sujal Gayakwad**, a cybersecurity-focused developer interested in understanding how systems work, how they fail, and how they can be designed to become more resilient.
 
-👉 **https://sujalgayakwad.github.io/portfolio/**
+```text
+LEARN → BUILD → BREAK → DEBUG → SECURE → REBUILD → REPEAT
+```
+
+---
+
+## ⚡ `whoami`
+
+```bash
+$ whoami
+
+sujal@gayakwad:~$ ./profile
+
+> Identity       : Sujal Gayakwad
+> Role           : Cybersecurity Developer
+> Focus          : Security + Software Engineering
+> Location       : India
+> Status         : Building & Learning
+> Mindset        : Security First
+> Current Mode   : ████████████████████ 100%
+```
+
+---
+
+# 🧠 About Me
+
+I enjoy going beyond tutorials and building systems that demonstrate practical engineering.
+
+### Current interests
+
+- 🔐 Cybersecurity
+- 📡 Wireless Security
+- 🌐 Network Analysis
+- 🧪 Security Experimentation
+- 🧠 Artificial Intelligence
+- 🔎 Threat Intelligence
+- 🛠️ Security Automation
+- ☁️ Cloud Security
+- 🧩 Backend Architecture
+- 🎨 Modern Web Interfaces
 
 ---
 
 # 🚀 Featured Projects
 
-## 🛡️ CyberShield — Wi-Fi Security Analyzer
+| Project | Description | Focus |
+|---|---|---|
+| 🛡️ **CyberShield** | Wi-Fi Security Analyzer & Spectrum Auditor | Cybersecurity |
+| 🤖 **Study Buddy AI** | Academic AI Copilot & Knowledge Retrieval | AI / RAG |
+| 🎬 **CineStream** | Next-Generation Cinema Streaming Hub | Web Development |
+| 🏨 **HostelEase** | Hostel Management System | Full-Stack |
+| 🎯 **Threat Hunting Pipeline** | Automated Security Telemetry | Security |
+| ☁️ **Zero-Trust Auditor** | Cloud Security Policy Auditor | Cloud Security |
 
-A Wi-Fi security analysis application focused on wireless network discovery, network information, security assessment, and threat identification.
+---
 
-### Features
+# 🛡️ CyberShield
 
-- 📡 Wi-Fi network scanning
-- 🔍 Network information analysis
-- 🛡️ Wireless security assessment
-- 📊 Security visualization
-- 🚨 Threat detection concepts
-- 📶 802.11 network analysis
-- 🔐 Security analysis
+### Wi-Fi Security Analyzer & Spectrum Auditor
 
-### Technologies
+A cybersecurity-focused wireless analysis project exploring passive 802.11 analysis, wireless telemetry, threat identification, and security assessment.
 
 ```text
-Python
-Flask
-Netsh WLAN
-HTML5
-CSS3
-JavaScript
-Canvas
-Cryptography
-🤖 Study Buddy AI
+📡 Wireless Spectrum Analysis
+🔍 Network Discovery
+🚨 Threat Detection
+🛜 Rogue AP Detection
+🔐 WPA Security Analysis
+📊 Security Telemetry
+```
 
-An AI-powered academic assistant designed to help students learn technical subjects and interact with educational content.
+**Stack:** Python • Flask • HTML5 Canvas • Cryptography • Netsh WLAN
 
-Features
-🤖 AI-powered assistance
-📚 Study support
-🔎 Knowledge retrieval
-🧠 Concept exploration
-📝 Flashcard generation
-💬 Interactive learning
-📊 Learning interface
-Technologies
-React.js
-Python
-FastAPI
-LangChain
-RAG
-Vector Database
-JavaScript
-🎬 CineStream — Streaming Platform
+---
 
-A modern movie discovery and streaming-style web application with an interactive entertainment-focused interface.
+# 🤖 Study Buddy AI
 
-Features
-🎥 Movie discovery
-🔎 Search
-🎭 Genre browsing
-🎞️ Trailer interface
+### Academic Copilot & Knowledge Synthesis
+
+An AI-powered knowledge platform designed around structured retrieval and technical knowledge synthesis.
+
+```text
+🧠 Retrieval-Augmented Generation
+🔎 Vector Search
+📚 Technical Document Processing
+🕸️ Knowledge Graphs
+💬 AI-Assisted Learning
+📊 Structured Knowledge
+```
+
+**Stack:** FastAPI • LangChain • RAG • Vector Database • React
+
+---
+
+# 🎬 CineStream
+
+### Next-Generation Cinema Streaming Hub
+
+A modern entertainment interface designed around smooth browsing, media discovery, REST APIs, and responsive video experiences.
+
+```text
+🎞️ Movie Discovery
+🎥 Trailer Playback
+🔎 Genre Discovery
+⚡ REST API
+🖼️ Progressive Image Loading
 📱 Responsive UI
-🔗 REST API integration
 💾 Web Storage
-▶️ HTML5 Video
-Technologies
-JavaScript
-HTML5
-CSS3
-REST API
-HTML5 Video
-Web Storage
-🏠 HostelEase — Hostel Management System
+```
 
-A web-based hostel management system designed to simplify student accommodation and administrative management.
+**Stack:** JavaScript ES6+ • HTML5 Video • CSS3 • REST API • Web Storage
 
-Features
-👨‍🎓 Student management
-🏠 Room allocation
-🔐 Authentication
-👥 Role-based access control
-📊 Dashboard
-📋 Attendance management
-📈 Analytics
-⚙️ Administration
-Technologies
-Node.js
-Express.js
-PostgreSQL
-JWT
-RBAC
-Chart.js
-HTML
-CSS
-JavaScript
-💻 Technical Skills
-Programming Languages
-<p> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnubash&logoColor=white"> </p>
-Frontend Development
-<p> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"> </p>
-Backend Development
-<p> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"> </p>
-Cybersecurity
-Wi-Fi Security
-802.11 Networking
-Network Security
-Threat Analysis
-Network Reconnaissance
-OWASP Concepts
-Authentication
-Authorization
-RBAC
-Cryptography Fundamentals
-Linux
-Security Monitoring
-CTF Practice
-Tools
-<p> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"> </p>
-🔐 Cybersecurity Interests
-📡 Wireless Security
-802.11 networking
-Wi-Fi security analysis
-Wireless reconnaissance
-Rogue access-point detection concepts
-Network monitoring
-🔑 Cryptography
-Password entropy
-Encryption fundamentals
-Authentication security
-Secure communication
-Key security concepts
-🧱 Secure Software Engineering
-OWASP security concepts
-Input validation
-Authentication
-Authorization
-RBAC
-Secure API design
-Secure application architecture
-🧪 Security Research
-CTF practice
-Threat analysis
-Defensive security
-Network security
-Security automation
-📚 Currently Learning
+---
 
-I'm continuously improving my knowledge in:
+# 🏨 HostelEase
 
-Memory Forensics
-Threat Hunting
-Zeek
-Suricata
-Network Security
-Wireless Security
-AI Security
-LLM Applications
-RAG Systems
-Secure Software Architecture
-Security Automation
-🎨 Portfolio Features
+### Hostel Management System
 
-The portfolio website includes:
+A full-stack campus housing administration platform.
 
-🏠 Modern landing page
-👨‍💻 About section
-🛡️ Cybersecurity specialization
-📡 Wireless security section
-🚀 Project showcase
-💻 Technology stack
-🔗 GitHub integration
-💼 LinkedIn integration
-📸 Instagram profile
-📧 Contact section
-📱 Responsive design
-🌙 Cybersecurity-themed interface
-✨ Smooth animations
-📂 Repository Structure
-portfolio/
-│
-├── index.html
-│
-├── assets/
-│   ├── images/
-│   │   ├── avatar.jpg
-│   │   ├── wifi-security.jpg
-│   │   ├── study-buddy.jpg
-│   │   ├── movie-streaming.jpg
-│   │   └── hostel-management.jpg
-│   │
-│   └── icons/
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-└── README.md
-⚙️ Run Locally
+```text
+👥 Student Management
+🏠 Room Allocation
+🔐 RBAC
+📊 Analytics
+🧾 Invoice Auditing
+📋 Attendance
+🔑 JWT Authentication
+```
 
-Clone the repository:
+**Stack:** Node.js • Express.js • PostgreSQL • JWT • RBAC • Chart.js
 
-git clone https://github.com/Sujagayakwad/portfolio.git
+---
 
-Enter the project:
+# 🧰 Technology Arsenal
 
-cd portfolio
+### Languages
 
-For a simple HTML/CSS/JS portfolio, run:
+![Python](https://skillicons.dev/icons?i=python)
+![JavaScript](https://skillicons.dev/icons?i=javascript)
+![Java](https://skillicons.dev/icons?i=java)
+![C](https://skillicons.dev/icons?i=c)
+![Bash](https://skillicons.dev/icons?i=bash)
+![Go](https://skillicons.dev/icons?i=go)
 
-python -m http.server 5500
+### Frontend
 
-Open:
+![HTML](https://skillicons.dev/icons?i=html)
+![CSS](https://skillicons.dev/icons?i=css)
+![React](https://skillicons.dev/icons?i=react)
+![Tailwind](https://skillicons.dev/icons?i=tailwind)
+![Vite](https://skillicons.dev/icons?i=vite)
 
-http://localhost:5500
-🌐 GitHub Pages
+### Backend & Database
 
-This portfolio is deployed using GitHub Pages.
+![Node](https://skillicons.dev/icons?i=nodejs)
+![Express](https://skillicons.dev/icons?i=express)
+![FastAPI](https://skillicons.dev/icons?i=fastapi)
+![Flask](https://skillicons.dev/icons?i=flask)
+![PostgreSQL](https://skillicons.dev/icons?i=postgres)
+![MongoDB](https://skillicons.dev/icons?i=mongodb)
+![MySQL](https://skillicons.dev/icons?i=mysql)
 
-Repository
+---
 
-https://github.com/Sujagayakwad/portfolio
+# 🔐 Security Stack
 
-Live Website
+```text
+┌───────────────────────────────────────────┐
+│              SECURITY STACK               │
+├───────────────────────────────────────────┤
+│                                           │
+│  🔐 Network Security                     │
+│  📡 Wireless Security                    │
+│  🕵️ Threat Intelligence                  │
+│  🔎 Security Auditing                    │
+│  🧪 Digital Forensics                    │
+│  🛡️ Defensive Security                   │
+│  ☁️ Cloud Security                       │
+│  🔒 Zero Trust                           │
+│  🐳 Docker                               │
+│  ☸️ Kubernetes                            │
+│                                           │
+└───────────────────────────────────────────┘
+```
 
-https://sujalgayakwad.github.io/portfolio/
+---
 
-📬 Contact
-📧 Email
+# 📊 GitHub Analytics
 
-Sujalgayakwad119@gmail.com
+<div align="center">
 
-💻 GitHub
+<img height="180" src="https://github-readme-stats.vercel.app/api?username=Sujalgayakwad&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF5A5F&icon_color=FF6B35&text_color=FFFFFF"/>
 
-https://github.com/Sujagayakwad
+<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sujalgayakwad&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF5A5F&text_color=FFFFFF"/>
 
-💼 LinkedIn
+</div>
 
-https://www.linkedin.com/in/sujal-gayakwad-4758a3319/
+---
 
-📸 Instagram
+# 🔥 Contribution Streak
 
-https://www.instagram.com/sujal._gayakwad/
+<div align="center">
 
-📊 Portfolio Status
-SYSTEM STATUS : OPERATIONAL
-SECURITY MODE : ACTIVE
-PORTFOLIO     : ONLINE
-PROJECTS      : 4+
-PLATFORM      : GITHUB PAGES
-👨‍💻 Author
-Sujal Gayakwad
+<img src="https://streak-stats.demolab.com?user=Sujalgayakwad&theme=radical&hide_border=true&background=0D1117&ring=FF5A5F&fire=FF6B35&currStreakLabel=FFFFFF"/>
 
-Cybersecurity & Full-Stack Developer
+</div>
 
-Building secure applications, exploring cybersecurity, and continuously learning.
+---
 
-<p align="center">
 
-🛡️ Cybersecurity
-💻 Full-Stack Development
-🌐 Web Engineering
-🔐 Secure Software
 
-</p> <p align="center">
 
-© 2026 Sujal Gayakwad
+# 🧪 Current Lab
+
+```text
+╔══════════════════════════════════════════════════════╗
+║                   SUJAL SECURITY LAB                 ║
+╠══════════════════════════════════════════════════════╣
+║                                                      ║
+║  [ONLINE]  Wireless Security                         ║
+║  [ONLINE]  Network Analysis                          ║
+║  [ONLINE]  Web Security                              ║
+║  [ONLINE]  AI Security                               ║
+║  [ONLINE]  Security Automation                       ║
+║  [BUILD]   Threat Hunting Pipeline                   ║
+║  [BUILD]   Zero-Trust Infrastructure                 ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
+
+---
+
+# 🔭 Currently Building
+
+```text
+┌──────────────────────────────────────────────┐
+│                                              │
+│  🔬 Security Research                        │
+│  🛡️ Defensive Security Tools                 │
+│  🤖 AI Security Applications                 │
+│  📡 Wireless Security Projects               │
+│  🌐 Full-Stack Applications                  │
+│  ☁️ Cloud Security Experiments               │
+│                                              │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+# 🎯 Goals
+
+- 🚀 Build production-quality software
+- 🔐 Develop practical cybersecurity tools
+- 📡 Explore wireless and network security
+- 🧠 Build AI-powered security systems
+- ☁️ Learn cloud-native security
+- 🐳 Work with containers and infrastructure
+- 🌐 Contribute to open source
+- 🧪 Perform responsible security research
+- 📚 Continuously improve engineering skills
+
+---
+
+# 🌐 Portfolio
+
+<div align="center">
+
+<a href="https://sujalgayakwad.github.io/portfolio/">
+
+<img src="https://img.shields.io/badge/ENTER%20CYBER.SUJAL-%F0%9F%9B%A1%EF%B8%8F-FF4D5A?style=for-the-badge&labelColor=111111"/>
+
+</a>
+
+<br><br>
+
+**Projects • Research • Skills • Contact • Technical Evidence**
+
+</div>
+
+---
+
+# 📡 Connect With Me
+
+<div align="center">
+
+<a href="https://github.com/Sujalgayakwad">
+<img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="mailto:sujalgayakwad119@gmail.com">
+<img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail&logoColor=EA4335"/>
+</a>
+
+<a href="https://sujalgayakwad.github.io/portfolio/">
+<img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=googlechrome&logoColor=FF5A5F"/>
+</a>
+
+</div>
+
+---
+
+# ⚠️ Security & Responsible Research
+
+All cybersecurity projects shown in this portfolio are intended for:
+
+- Educational purposes
+- Authorized security testing
+- Defensive research
+- Controlled laboratory environments
+- Security engineering
+
+Never test systems, networks, accounts, or infrastructure without proper authorization.
+
+---
+
+<div align="center">
+
+# 🛡️ CYBER.SUJAL
+
+### `SECURITY • ENGINEERING • RESEARCH`
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:ff6b35,100:ff3b5c&height=120&section=footer&animation=fadeIn"/>
+
+</div>
