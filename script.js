@@ -5,7 +5,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initParticleCanvas();
   initTerminalTyping();
   initScrollNav();
   initProjectSystem();
@@ -470,6 +469,31 @@ function initScrollNav() {
 
 /* ================= 4. COMPREHENSIVE CYBERSECURITY PROJECT DATA ================= */
 const cybersecurityProjects = {
+  'sharex': {
+    title: 'ShareX - Android P2P Local File Sharing System',
+    badge: 'P2P Wireless & Android System',
+    tagline: 'Zero-Cloud Offline Direct P2P Transfer via Wi-Fi Direct & Nearby Connections',
+    image: './assets/images/sharex.jpg',
+    whatWasIt: 'ShareX is a fast, privacy-first, fully local Android file-sharing application designed to transfer files directly between devices without requiring an internet connection or cloud intermediaries. It leverages Google\'s Nearby Connections API to establish high-bandwidth, direct peer-to-peer connections over Wi-Fi Direct and Bluetooth Low Energy (BLE).',
+    whyBuilt: 'Transferring files between nearby mobile devices usually relies on cloud storage uploads, exposing private documents to external servers and consuming cellular data. Native Bluetooth transfers are prohibitively slow for large media. ShareX was engineered to provide high-speed, direct local transfers with zero cloud footprint, complete data privacy, and explicit receiver authorization.',
+    objective: 'To build a resilient, offline-first peer-to-peer transfer platform with sub-second device discovery, high-throughput payload streaming via Wi-Fi Direct, full transfer auditing via a local SQLite/Room database, and modern Jetpack Compose UI.',
+    tools: ['Kotlin', 'Jetpack Compose', 'Google Nearby Connections', 'Wi-Fi Direct & BLE', 'Room DB (SQLite)', 'Coroutines & StateFlow'],
+    whatIDid: [
+      'Integrated Google Nearby Connections API with Star and Cluster topologies for low-latency peer discovery and high-bandwidth payload streaming.',
+      'Engineered asymmetric P2P handshakes requiring explicit receiver cryptographic token verification and consent prior to data transmission.',
+      'Implemented non-blocking payload streaming using Nearby Connections Payload.fromFile over Wi-Fi Direct sockets.',
+      'Architected reactive UI state machines and clean send/receive screens using Kotlin Coroutines, StateFlow, and Jetpack Compose Material 3.',
+      'Constructed a local transfer history audit trail with Android Room (SQLite), tracking bytes transferred, timestamps, and device identifiers.',
+      'Implemented Android Storage Access Framework (SAF) integration for secure, scoped storage file selection and direct Downloads folder persistence.'
+    ],
+    skillsDeveloped: ['Peer-to-Peer Wireless Networking (Wi-Fi Direct, BLE)', 'Local Discovery & Connection Handshaking', 'Android Jetpack Compose & Architecture', 'Kotlin Coroutines & Flow', 'Scoped Storage & File Streaming', 'Offline-First Embedded Persistence'],
+    outcome: 'A robust Android application capable of transferring large files at Wi-Fi Direct speeds entirely offline, maintaining 100% transfer privacy with zero network telemetry or cloud reliance.',
+    realWorldRelevance: 'Addresses critical privacy requirements for air-gapped environments, disaster scenarios with zero cellular infrastructure, and secure enterprise device-to-device document sharing.',
+    repoUrl: 'https://github.com/Sujalgayakwad/sharex',
+    demoUrl: 'https://github.com/Sujalgayakwad/sharex',
+    writeupUrl: '#',
+    docsUrl: '#'
+  },
   'wifi-security': {
     title: 'CyberShield - Wi-Fi Security Analyser & Spectrum Auditor',
     badge: 'Flagship Cybersecurity Project',
@@ -490,8 +514,8 @@ const cybersecurityProjects = {
     skillsDeveloped: ['Wireless Protocol Analysis (802.11b/g/n/ac/ax)', 'Cryptographic Cipher Auditing (WEP, WPA2-CCMP, WPA3-SAE)', 'Heuristic Rogue Detection', 'Passive Network Reconnaissance', 'Windows System API Interfacing', 'Threat Intelligence Scoring'],
     outcome: 'A completely autonomous, standalone Wi-Fi auditing application providing instant security metrics, automated PDF/JSON audit exports, and actionable mitigation recommendations.',
     realWorldRelevance: 'Directly addresses enterprise airspace compliance (CIS Controls 9.4, NIST SP 800-153) and protects remote workers from rogue AP credential theft in coffee shops, airports, and corporate campuses.',
-    repoUrl: 'https://github.com/Sujagayakwad',
-    demoUrl: '#',
+    repoUrl: 'https://github.com/Sujalgayakwad/Wi-Fi-Security-Analyser',
+    demoUrl: 'https://github.com/Sujalgayakwad/Wi-Fi-Security-Analyser',
     writeupUrl: '#',
     docsUrl: '#'
   },
@@ -513,7 +537,7 @@ const cybersecurityProjects = {
     skillsDeveloped: ['Vector Similarity Search', 'RAG Pipeline Architecture', 'Context Window Optimization', 'Interactive Node Graph Visualization', 'RESTful API Engineering'],
     outcome: 'Over 40% reduction in revision time during internal testing, with high user retention and zero out-of-context hallucinations on indexed technical material.',
     realWorldRelevance: 'Demonstrates scalable ingestion of security documentation (MITRE ATT&CK frameworks, CVE feeds) into queryable vector intelligence.',
-    repoUrl: 'https://github.com/Sujagayakwad',
+    repoUrl: 'https://github.com/Sujalgayakwad',
     demoUrl: '#',
     writeupUrl: '#',
     docsUrl: '#'
@@ -536,7 +560,7 @@ const cybersecurityProjects = {
     skillsDeveloped: ['Asynchronous DOM Rendering', 'Media Streaming UI Design', 'Client-side State Caching', 'Performance Budgeting (Lighthouse 95+)'],
     outcome: 'A polished, production-ready frontend experience loading in under 1.2 seconds with intuitive navigation across desktop and mobile screens.',
     realWorldRelevance: 'Showcases frontend performance optimization, secure external API communication, and responsive UI engineering vital for consumer-facing platforms.',
-    repoUrl: 'https://github.com/Sujagayakwad',
+    repoUrl: 'https://github.com/Sujalgayakwad',
     demoUrl: '#',
     writeupUrl: '#',
     docsUrl: '#'
@@ -560,7 +584,7 @@ const cybersecurityProjects = {
     skillsDeveloped: ['Database Schema Normalization', 'Role-Based Authorization & Session Security', 'Data Validation & Sanitization', 'Audit Logging & Financial Reporting'],
     outcome: 'A robust campus administrative portal that reduced room allocation errors to zero and streamlined student grievance resolution.',
     realWorldRelevance: 'Directly mirrors enterprise identity and access management (IAM), physical facility asset tracking, and verifiable compliance recordkeeping.',
-    repoUrl: 'https://github.com/Sujagayakwad',
+    repoUrl: 'https://github.com/Sujalgayakwad',
     demoUrl: '#',
     writeupUrl: '#',
     docsUrl: '#'
@@ -583,7 +607,7 @@ const cybersecurityProjects = {
     skillsDeveloped: ['SOC Blue Team Automation', 'Threat Telemetry Parsing', 'MITRE ATT&CK Mapping', 'eBPF & Sysmon Auditing', 'Containerized Pipeline Deployment'],
     outcome: 'Expected release: Q4 2026 with full open-source repository, interactive sandbox demo, and comprehensive threat simulation test suite.',
     realWorldRelevance: 'Addresses the urgent enterprise need for automated Tier-1/Tier-2 SOC triage and rapid defensive incident containment.',
-    repoUrl: 'https://github.com/Sujagayakwad',
+    repoUrl: 'https://github.com/Sujalgayakwad',
     demoUrl: '#',
     writeupUrl: '#',
     docsUrl: '#'
@@ -606,7 +630,7 @@ const cybersecurityProjects = {
     skillsDeveloped: ['Cloud Security Posture Management (CSPM)', 'Kubernetes Hardening', 'Zero-Trust Architecture', 'eBPF Kernel Probing', 'Policy as Code (OPA)'],
     outcome: 'Expected release: Q4 2026 featuring one-click Helm deployment and comprehensive CIS benchmark validation.',
     realWorldRelevance: 'Aligns directly with cloud engineering and DevSecOps requirements to secure multi-tenant infrastructure and container meshes.',
-    repoUrl: 'https://github.com/Sujagayakwad',
+    repoUrl: 'https://github.com/Sujalgayakwad',
     demoUrl: '#',
     writeupUrl: '#',
     docsUrl: '#'
@@ -961,7 +985,7 @@ function playSynthesizedBeep() {
 
     osc.start();
     osc.stop(ctx.currentTime + 0.04);
-  } catch (err) {}
+  } catch (err) { }
 }
 
 function playSynthesizedChime() {
@@ -985,7 +1009,7 @@ function playSynthesizedChime() {
       osc.start(t + idx * 0.08);
       osc.stop(t + idx * 0.08 + 0.25);
     });
-  } catch (err) {}
+  } catch (err) { }
 }
 
 /* ================= 10. CLIPBOARD COPY BUTTONS ================= */

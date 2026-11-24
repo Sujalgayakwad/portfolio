@@ -1,363 +1,231 @@
-<div align="center">
+# 🛡️ Sujal Gayakwad — Cybersecurity & Full-Stack Portfolio with Custom Admin CMS
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:ff3b5c,50:ff6b35,100:7c3aed&height=220&section=header&text=SUJAL%20GAYAKWAD&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Cybersecurity%20%7C%20Full-Stack%20Development%20%7C%20Security%20Research&descAlignY=58&descSize=18&animation=fadeIn"/>
-
-<br>
-
-<a href="https://sujalgayakwad.github.io/portfolio/">
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=FF5A5F&center=true&vCenter=true&width=800&lines=Cybersecurity+Enthusiast+%F0%9F%9B%A1%EF%B8%8F;Full-Stack+Developer+%F0%9F%92%BB;Security+Researcher+%F0%9F%94%90;Building+Systems+%7C+Breaking+Systems+%7C+Securing+Systems;Always+Learning.+Always+Building."/>
-</a>
-
-<br><br>
-
-<a href="https://sujalgayakwad.github.io/portfolio/">
-<img src="https://img.shields.io/badge/%F0%9F%8C%90%20LIVE%20PORTFOLIO-FF4D5A?style=for-the-badge&logo=googlechrome&logoColor=white"/>
-</a>
-<a href="https://github.com/Sujalgayakwad">
-<img src="https://img.shields.io/badge/GITHUB-111111?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-<a href="mailto:sujalgayakwad119@gmail.com">
-<img src="https://img.shields.io/badge/EMAIL-FF6B35?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=Sujalgayakwad&style=for-the-badge&color=ff4d5a&label=PROFILE+VISITORS"/>
-
-</div>
+> Recreated from the custom Admin Dashboard CMS reference showcase (Kashif-style CMS). Built with **React 18, Vite, Tailwind CSS, Lucide React, Framer Motion, Node.js, Express, and MongoDB** (with zero-config local persistence fallback).
 
 ---
 
-# 🛡️ Cyber.Sujal
+## 🌟 Key Features
 
-> **Security • Engineering • Research • Innovation**
-
-I'm **Sujal Gayakwad**, a cybersecurity-focused developer interested in understanding how systems work, how they fail, and how they can be designed to become more resilient.
-
-```text
-LEARN → BUILD → BREAK → DEBUG → SECURE → REBUILD → REPEAT
-```
+### 1. 🖥️ Landing Page
+- **Dark Navy & Obsidian Cyber Theme**: Styled with electric-cyan (`#00f5b0`) and neon-blue (`#00d2ff`) accents, ambient glow orbs, and cyber grid overlay.
+- **Dynamic Particle Matrix Canvas**: Live interactive particle network with node connections, pulsing rays, and cursor tracking.
+- **Hero Section**:
+  - Greeting terminal badge: `system_status: operational • sec_ops`
+  - Name with glowing gradient: **Sujal Gayakwad**
+  - Typewriter effect rotating between multiple cybersecurity specializations
+  - **Circular Portrait with Glowing Neon Aura**: Displays the original portrait (`avatar.jpg`) with double glowing cyber rings and verified badge.
+  - Primary & Secondary Call-To-Action buttons ("Explore Projects & Evidence", "Initiate Transmission")
+  - Direct verified social connect pills (GitHub, LinkedIn, Instagram).
+- **Statistics Bar**: Real-time stats (15+ Projects & Audits, 500+ Threat Rules, 1,200+ CTF Hours, 100% Zero-Trust Mindset).
+- **Personal Introduction & About Pillars**:
+  - RF & Wireless Airspace Auditing
+  - Applied Cryptography & Shannon Entropy
+  - Secure Full-Stack Development (OWASP Top 10, RBAC)
+  - Adversary Emulation & CTFs
+  - Verified Information card with direct social connect links.
+- **Detailed Projects Showcase**:
+  - Filter by category: **All Projects**, **Wireless & Cybersecurity**, **AI & Systems**, **Web Architectures**.
+  - **Interactive Evidence Modal**: Clicking "Evidence & Details" opens the deep technical breakdown:
+    - 01. What was the project?
+    - 02. Why did I build it & Primary Objective
+    - 03. Implementation Actions (concrete technical steps)
+    - 04. Tools & Technologies Employed
+    - 05. Core Skills Developed
+    - 06. Outcome & Real-World Industry Relevance
+    - Verifiable GitHub Repository and Interactive Demo links.
+- **Skills & Capabilities**: Categorized skills with mastery percentage indicators and visual progress bars.
+- **Services Grid**: 4 core engineering service offerings with neon hover cards.
+- **Encrypted Contact Channel**:
+  - Direct contact cards (Email with 1-click clipboard copy, Base Location, Availability Status).
+  - **Live Contact Form**: Connected directly to the backend Express API (`POST /api/messages`), delivering inquiries straight into the Admin CMS inbox!
+- **Footer**: Sleek minimal footer with copyright, links, and floating back-to-top button.
 
 ---
 
-## ⚡ `whoami`
+### 2. ⚡ Custom Admin Dashboard CMS (Kashif Video Style)
+Click the **"CMS"** key button in the top navigation bar (or footer link) to open the Admin CMS:
 
+- **Secure Token-Based Login**: Protected routes using Bcrypt password hashing and JWT authentication.
+  - Default Admin Email: `admin@sujal.dev`
+  - Default Admin Password: `admin123`
+- **Dashboard Overview**:
+  - Real-time metric cards (Total Projects, Technical Skills, Inquiries Received, Unread Messages).
+  - System health indicators (Uptime 99.98%, SecOps Active).
+  - Recent transmission preview.
+- **Hero & Profile Editor**:
+  - Live text editing: Greeting badge, Full Name, Main Title, Tagline, Short Bio, About Me, Availability Status, Location, and Email.
+  - **Dynamic Typewriter Manager**: Add or delete rotating phrases on the fly.
+  - **Profile Picture Upload**: Upload a new portrait photo directly from your device via Multer — updates live on the website immediately!
+- **Projects Management (Full CRUD)**:
+  - Create new projects or edit existing ones.
+  - Upload thumbnail images or enter custom paths.
+  - Edit all 6 technical evidence sections.
+  - Filter and search projects.
+  - Delete projects with confirmation prompts.
+- **Skills & Services CMS**:
+  - Add or remove technical skills with category, icon, and proficiency slider (1–100%).
+  - Add or remove service cards.
+- **Inquiries / Transmission Inbox**:
+  - View all messages submitted through the contact form.
+  - Filter between All vs Unread transmissions.
+  - Mark messages as Read/Unread.
+  - 1-click **Reply via Email** (`mailto:`) button.
+  - Purge / delete messages.
+- **Settings & "Factory Reset" (Signature Feature)**:
+  - System diagnostics and server status.
+  - Change Admin Password.
+  - **Factory Reset**: As demonstrated in Kashif's video, restores the entire portfolio back to its original factory default state with a single click!
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React 18, Vite, TypeScript, Tailwind CSS, Lucide React, Framer Motion |
+| **Backend** | Node.js, Express.js, Multer (file uploads), CORS, Dotenv |
+| **Authentication** | JSON Web Tokens (JWT), Bcrypt.js |
+| **Database** | MongoDB with Mongoose + Automatic Fallback Local JSON Persistence (`store.json`) |
+| **Aesthetics** | Cyber Dark Navy (`#030712`), Electric Cyan (`#00f5b0`), Neon Blue (`#00d2ff`) |
+
+> **Zero-Friction Database**: If MongoDB is installed and running, the backend automatically connects to it. If MongoDB is offline, the backend seamlessly switches to persistent local JSON storage (`server/data/store.json`). All edits, uploads, and contact messages persist across restarts!
+
+---
+
+## 🚀 Quick Start & Installation
+
+### 1. Prerequisites
+- **Node.js**: v18 or higher (v22 recommended)
+- **npm**: v9 or higher
+
+### 2. Install Dependencies
 ```bash
-$ whoami
+npm install
+```
 
-sujal@gayakwad:~$ ./profile
+### 3. Environment Configuration
+Create a `.env` file from `.env.example`:
+```bash
+cp .env.example .env
+```
+Default `.env` configuration:
+```env
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=mongodb://127.0.0.1:27017/portfolio_cms
+JWT_SECRET=sujal_cyber_security_jwt_secret_token_99182374
+ADMIN_EMAIL=admin@sujal.dev
+ADMIN_PASSWORD=admin123
+VITE_API_URL=/api
+```
 
-> Identity       : Sujal Gayakwad
-> Role           : Cybersecurity Developer
-> Focus          : Security + Software Engineering
-> Location       : India
-> Status         : Building & Learning
-> Mindset        : Security First
-> Current Mode   : ████████████████████ 100%
+### 4. Run Locally (Concurrent Frontend & Backend)
+```bash
+npm run dev
+```
+This runs both:
+- **Express Backend API**: `http://localhost:5000`
+- **Vite React Frontend**: `http://localhost:5173` (with `/api` and `/uploads` proxy to port 5000)
+
+### 5. Open in Browser
+Open `http://localhost:5173` to explore your live portfolio!
+
+---
+
+## 🔐 Admin CMS Credentials
+
+Click the **"CMS"** button in the navigation bar and log in with:
+- **Email:** `admin@sujal.dev`
+- **Password:** `admin123`
+
+*(You can change the email and password inside the CMS Settings tab or in `.env`)*
+
+---
+
+## 📦 Available Scripts
+
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts both Express backend and Vite frontend concurrently |
+| `npm run dev:server` | Starts only the Express backend server on port 5000 |
+| `npm run dev:client` | Starts only the Vite frontend dev server on port 5173 |
+| `npm run build` | Builds the production bundle into `dist/` |
+| `npm run seed` | Seeds or resets the database/store to factory default content |
+| `npm start` | Starts the production Express server |
+
+---
+
+## 📁 Project Architecture
+
+```
+Portfolio/
+├── public/
+│   ├── assets/
+│   │   └── images/            # Project images & avatar.jpg
+│   └── uploads/               # User uploaded images via CMS
+├── server/
+│   ├── data/
+│   │   └── store.json         # Persistent JSON database (auto-created)
+│   └── src/
+│       ├── config/
+│       │   ├── seedData.js    # Default seed portfolio data
+│       │   └── seed.js        # Seed script
+│       ├── middleware/
+│       │   ├── authMiddleware.js
+│       │   └── uploadMiddleware.js
+│       ├── routes/
+│       │   ├── authRoutes.js
+│       │   ├── portfolioRoutes.js
+│       │   ├── projectRoutes.js
+│       │   ├── skillRoutes.js
+│       │   ├── serviceRoutes.js
+│       │   ├── messageRoutes.js
+│       │   └── uploadRoutes.js
+│       ├── utils/
+│       │   └── dataStore.js   # Unified storage persistence engine
+│       └── server.js          # Express entry point
+├── src/
+│   ├── components/
+│   │   ├── admin/             # Complete Admin CMS Suite
+│   │   │   ├── AdminModal.tsx
+│   │   │   ├── AdminSidebar.tsx
+│   │   │   ├── OverviewTab.tsx
+│   │   │   ├── HeroEditorTab.tsx
+│   │   │   ├── ProjectsTab.tsx
+│   │   │   ├── ProjectFormModal.tsx
+│   │   │   ├── SkillsTab.tsx
+│   │   │   ├── MessagesTab.tsx
+│   │   │   └── SettingsTab.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── MatrixBackground.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── ProjectModal.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── ServicesSection.tsx
+│   │   └── StatsSection.tsx
+│   ├── context/
+│   │   ├── AuthContext.tsx
+│   │   └── PortfolioContext.tsx
+│   ├── services/
+│   │   └── api.ts             # Typed REST API client
+│   ├── types/
+│   │   └── index.ts           # TypeScript interfaces
+│   ├── App.tsx
+│   ├── index.css              # Custom styling & Tailwind directives
+│   └── main.tsx
+├── .env.example
+├── .env
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
 ```
 
 ---
 
-# 🧠 About Me
-
-I enjoy going beyond tutorials and building systems that demonstrate practical engineering.
-
-### Current interests
-
-- 🔐 Cybersecurity
-- 📡 Wireless Security
-- 🌐 Network Analysis
-- 🧪 Security Experimentation
-- 🧠 Artificial Intelligence
-- 🔎 Threat Intelligence
-- 🛠️ Security Automation
-- ☁️ Cloud Security
-- 🧩 Backend Architecture
-- 🎨 Modern Web Interfaces
-
----
-
-# 🚀 Featured Projects
-
-| Project | Description | Focus |
-|---|---|---|
-| 🛡️ **CyberShield** | Wi-Fi Security Analyzer & Spectrum Auditor | Cybersecurity |
-| 🤖 **Study Buddy AI** | Academic AI Copilot & Knowledge Retrieval | AI / RAG |
-| 🎬 **CineStream** | Next-Generation Cinema Streaming Hub | Web Development |
-| 🏨 **HostelEase** | Hostel Management System | Full-Stack |
-| 🎯 **Threat Hunting Pipeline** | Automated Security Telemetry | Security |
-| ☁️ **Zero-Trust Auditor** | Cloud Security Policy Auditor | Cloud Security |
-
----
-
-# 🛡️ CyberShield
-
-### Wi-Fi Security Analyzer & Spectrum Auditor
-
-A cybersecurity-focused wireless analysis project exploring passive 802.11 analysis, wireless telemetry, threat identification, and security assessment.
-
-```text
-📡 Wireless Spectrum Analysis
-🔍 Network Discovery
-🚨 Threat Detection
-🛜 Rogue AP Detection
-🔐 WPA Security Analysis
-📊 Security Telemetry
-```
-
-**Stack:** Python • Flask • HTML5 Canvas • Cryptography • Netsh WLAN
-
----
-
-# 🤖 Study Buddy AI
-
-### Academic Copilot & Knowledge Synthesis
-
-An AI-powered knowledge platform designed around structured retrieval and technical knowledge synthesis.
-
-```text
-🧠 Retrieval-Augmented Generation
-🔎 Vector Search
-📚 Technical Document Processing
-🕸️ Knowledge Graphs
-💬 AI-Assisted Learning
-📊 Structured Knowledge
-```
-
-**Stack:** FastAPI • LangChain • RAG • Vector Database • React
-
----
-
-# 🎬 CineStream
-
-### Next-Generation Cinema Streaming Hub
-
-A modern entertainment interface designed around smooth browsing, media discovery, REST APIs, and responsive video experiences.
-
-```text
-🎞️ Movie Discovery
-🎥 Trailer Playback
-🔎 Genre Discovery
-⚡ REST API
-🖼️ Progressive Image Loading
-📱 Responsive UI
-💾 Web Storage
-```
-
-**Stack:** JavaScript ES6+ • HTML5 Video • CSS3 • REST API • Web Storage
-
----
-
-# 🏨 HostelEase
-
-### Hostel Management System
-
-A full-stack campus housing administration platform.
-
-```text
-👥 Student Management
-🏠 Room Allocation
-🔐 RBAC
-📊 Analytics
-🧾 Invoice Auditing
-📋 Attendance
-🔑 JWT Authentication
-```
-
-**Stack:** Node.js • Express.js • PostgreSQL • JWT • RBAC • Chart.js
-
----
-
-# 🧰 Technology Arsenal
-
-### Languages
-
-![Python](https://skillicons.dev/icons?i=python)
-![JavaScript](https://skillicons.dev/icons?i=javascript)
-![Java](https://skillicons.dev/icons?i=java)
-![C](https://skillicons.dev/icons?i=c)
-![Bash](https://skillicons.dev/icons?i=bash)
-![Go](https://skillicons.dev/icons?i=go)
-
-### Frontend
-
-![HTML](https://skillicons.dev/icons?i=html)
-![CSS](https://skillicons.dev/icons?i=css)
-![React](https://skillicons.dev/icons?i=react)
-![Tailwind](https://skillicons.dev/icons?i=tailwind)
-![Vite](https://skillicons.dev/icons?i=vite)
-
-### Backend & Database
-
-![Node](https://skillicons.dev/icons?i=nodejs)
-![Express](https://skillicons.dev/icons?i=express)
-![FastAPI](https://skillicons.dev/icons?i=fastapi)
-![Flask](https://skillicons.dev/icons?i=flask)
-![PostgreSQL](https://skillicons.dev/icons?i=postgres)
-![MongoDB](https://skillicons.dev/icons?i=mongodb)
-![MySQL](https://skillicons.dev/icons?i=mysql)
-
----
-
-# 🔐 Security Stack
-
-```text
-┌───────────────────────────────────────────┐
-│              SECURITY STACK               │
-├───────────────────────────────────────────┤
-│                                           │
-│  🔐 Network Security                     │
-│  📡 Wireless Security                    │
-│  🕵️ Threat Intelligence                  │
-│  🔎 Security Auditing                    │
-│  🧪 Digital Forensics                    │
-│  🛡️ Defensive Security                   │
-│  ☁️ Cloud Security                       │
-│  🔒 Zero Trust                           │
-│  🐳 Docker                               │
-│  ☸️ Kubernetes                            │
-│                                           │
-└───────────────────────────────────────────┘
-```
-
----
-
-# 📊 GitHub Analytics
-
-<div align="center">
-
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=Sujalgayakwad&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF5A5F&icon_color=FF6B35&text_color=FFFFFF"/>
-
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sujalgayakwad&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=FF5A5F&text_color=FFFFFF"/>
-
-</div>
-
----
-
-# 🔥 Contribution Streak
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=Sujalgayakwad&theme=radical&hide_border=true&background=0D1117&ring=FF5A5F&fire=FF6B35&currStreakLabel=FFFFFF"/>
-
-</div>
-
----
-
-
-
-
-# 🧪 Current Lab
-
-```text
-╔══════════════════════════════════════════════════════╗
-║                   SUJAL SECURITY LAB                 ║
-╠══════════════════════════════════════════════════════╣
-║                                                      ║
-║  [ONLINE]  Wireless Security                         ║
-║  [ONLINE]  Network Analysis                          ║
-║  [ONLINE]  Web Security                              ║
-║  [ONLINE]  AI Security                               ║
-║  [ONLINE]  Security Automation                       ║
-║  [BUILD]   Threat Hunting Pipeline                   ║
-║  [BUILD]   Zero-Trust Infrastructure                 ║
-║                                                      ║
-╚══════════════════════════════════════════════════════╝
-```
-
----
-
-# 🔭 Currently Building
-
-```text
-┌──────────────────────────────────────────────┐
-│                                              │
-│  🔬 Security Research                        │
-│  🛡️ Defensive Security Tools                 │
-│  🤖 AI Security Applications                 │
-│  📡 Wireless Security Projects               │
-│  🌐 Full-Stack Applications                  │
-│  ☁️ Cloud Security Experiments               │
-│                                              │
-└──────────────────────────────────────────────┘
-```
-
----
-
-# 🎯 Goals
-
-- 🚀 Build production-quality software
-- 🔐 Develop practical cybersecurity tools
-- 📡 Explore wireless and network security
-- 🧠 Build AI-powered security systems
-- ☁️ Learn cloud-native security
-- 🐳 Work with containers and infrastructure
-- 🌐 Contribute to open source
-- 🧪 Perform responsible security research
-- 📚 Continuously improve engineering skills
-
----
-
-# 🌐 Portfolio
-
-<div align="center">
-
-<a href="https://sujalgayakwad.github.io/portfolio/">
-
-<img src="https://img.shields.io/badge/ENTER%20CYBER.SUJAL-%F0%9F%9B%A1%EF%B8%8F-FF4D5A?style=for-the-badge&labelColor=111111"/>
-
-</a>
-
-<br><br>
-
-**Projects • Research • Skills • Contact • Technical Evidence**
-
-</div>
-
----
-
-# 📡 Connect With Me
-
-<div align="center">
-
-<a href="https://github.com/Sujalgayakwad">
-<img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-
-<a href="mailto:sujalgayakwad119@gmail.com">
-<img src="https://img.shields.io/badge/Email-111111?style=for-the-badge&logo=gmail&logoColor=EA4335"/>
-</a>
-
-<a href="https://sujalgayakwad.github.io/portfolio/">
-<img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=googlechrome&logoColor=FF5A5F"/>
-</a>
-
-</div>
-
----
-
-# ⚠️ Security & Responsible Research
-
-All cybersecurity projects shown in this portfolio are intended for:
-
-- Educational purposes
-- Authorized security testing
-- Defensive research
-- Controlled laboratory environments
-- Security engineering
-
-Never test systems, networks, accounts, or infrastructure without proper authorization.
-
----
-
-<div align="center">
-
-# 🛡️ CYBER.SUJAL
-
-### `SECURITY • ENGINEERING • RESEARCH`
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:ff6b35,100:ff3b5c&height=120&section=footer&animation=fadeIn"/>
-
-
-
-</div>
+## 🛡️ License & Author
+Engineered with ❤️ by **Sujal Gayakwad**.
+Released under the MIT License.
